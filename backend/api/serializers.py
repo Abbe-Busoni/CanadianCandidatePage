@@ -1,10 +1,4 @@
-from django.contrib.auth.models import User
 from rest_framework import serializers
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ['url', 'username', 'email', 'groups']
 
 class CandidateSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=500, allow_blank=True, source="Candidate Name")

@@ -1,15 +1,9 @@
 from django.shortcuts import render
-from django.contrib.auth.models import User
-from rest_framework import viewsets, views, permissions
+from rest_framework import viewsets, views
 from rest_framework.response import Response
-from .serializers import UserSerializer, CandidateSerializer
+from .serializers import CandidateSerializer
 import pandas as pd
 import numpy as np
-
-# Create your views here.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
 
 class CandidateView(views.APIView):
     def get(self, request):

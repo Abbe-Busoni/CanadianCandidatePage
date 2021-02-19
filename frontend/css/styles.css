@@ -1,3 +1,9 @@
+body {
+	font-family: "Quicksand", Times, serif;
+}
 #table_id {
-	width: '100%'
+	width: '100%';
+}
+.subheading {
+	text-decoration: underline;
 }
